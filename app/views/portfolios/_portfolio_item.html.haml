@@ -3,7 +3,7 @@
     - unless portfolio_item.thumb_image.nil?
       %img.card-img-top{:src => portfolio_item.thumb_image}
     .card-body
-      %p.card-text= portfolio_item.subtitle
+      %p.card-text= portfolio_item.title
       -# %p.card-text= portfolio_item.body
       .d-flex.justify-content-between.align-items-center
         .btn-group
