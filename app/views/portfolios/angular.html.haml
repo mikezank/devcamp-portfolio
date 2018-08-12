@@ -1,9 +1,9 @@
 %h1 Angular Portfolio Items
-= link_to "Create New Item", new_portfolio_url
+= link_to "Create New Item", new_portfolio_url if logged_in?(:site_admin)
 - @portfolio_angular_items.each do |p|
   %p= link_to p.title, portfolio_path(p)
   %p= p.subtitle
   %p= p.body
   = image_tag p.thumb_image unless p.thumb_image.nil?
-  = link_to "Edit", edit_portfolio_path(p)
-  = link_to "Delete", p, method: :delete, data: { confirm: 'Are you sure?' }
+  = link_to "Edit", edit_portfolio_path(p) if logged_in?(:site_admin)
+  = link_to "Delete", p, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)
