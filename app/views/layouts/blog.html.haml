@@ -2,6 +2,8 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
     %title= @page_title
     = csrf_meta_tags
     %meta{:content => "#{@keyword_meta_tag}", :name => "keywords"}/
@@ -11,6 +13,7 @@
     %p.notice= notice
     %p.alert= alert
     = login_helper
+    = fa_icon "github"
     = yield
     = render "shared/nav", location: "bottom"
     = source_helper
