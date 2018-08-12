@@ -59,3 +59,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'zsoft_view_tool', git: 'https://github.com/mikezank/zsoft_view_tool'
+gem 'petergate', '~> 1.8', '>= 1.8.1'
