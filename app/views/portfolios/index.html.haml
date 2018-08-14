@@ -4,5 +4,6 @@
 .album.py-5.bg-light
   = link_to "Create New Item", new_portfolio_url if logged_in?(:site_admin)
   .container
-    .row.sortable
+    - sortclass = logged_in?(:site_admin) ? "sortable" : ""
+    .row{class: sortclass} 
       = render partial: "portfolio_item", collection: @portfolio_items
