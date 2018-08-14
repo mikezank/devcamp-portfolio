@@ -1,15 +1,16 @@
 .col-md-4
-  .card.mb-4.shadow-sm
-    - unless portfolio_item.thumb_image.nil?
-      %img.card-img-top{:src => portfolio_item.thumb_image}
-    .card-body
-      %p.card-text= portfolio_item.title
-      -# %p.card-text= portfolio_item.body
-      .d-flex.justify-content-between.align-items-center
-        .btn-group
-          %button.btn.btn-sm.btn-outline-secondary{:type => "button"} View
-          %button.btn.btn-sm.btn-outline-secondary{:type => "button"} Edit
-        %small.text-muted 9 mins
+  .card{data_id: portfolio_item.id}
+    .mb-4.shadow-sm
+      - unless portfolio_item.thumb_image.nil?
+        %img.card-img-top{:src => portfolio_item.thumb_image}
+      .card-body
+        %p.card-text= portfolio_item.title
+        -# %p.card-text= portfolio_item.body
+        .d-flex.justify-content-between.align-items-center
+          .btn-group
+            %button.btn.btn-sm.btn-outline-secondary{:type => "button"} View
+            %button.btn.btn-sm.btn-outline-secondary{:type => "button"} Edit
+          %small.text-muted 9 mins
 
 
 
